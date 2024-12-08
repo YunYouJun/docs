@@ -18,6 +18,10 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/favicon.svg',
+    outline: [2, 4],
+    search: {
+      provider: 'local',
+    },
 
     lastUpdated: {
       text: 'Last Updated',

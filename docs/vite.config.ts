@@ -22,11 +22,14 @@ export default defineConfig({
 
     groupIconVitePlugin({
       customIcon: {
+        node: 'vscode-icons:file-type-node',
         cli: 'vscode-icons:folder-type-cli',
         postcss: 'vscode-icons:file-type-postcss',
         playwright: 'vscode-icons:file-type-playwright',
         vitepress: 'simple-icons:vitepress',
         typedoc: 'vscode-icons:file-type-typedoc',
+        类型检查: 'vscode-icons:file-type-typescript',
+        eslint: 'vscode-icons:file-type-eslint',
       },
     }),
   ],

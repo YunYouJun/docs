@@ -4,7 +4,9 @@ repo: YunYouJun/bilibili-cover-generator
 link: https://bilibili-cover-generator.yunyoujun.cn
 ---
 
-# 哔哩哔哩封面生成器 <Badge type="warning">{{ $frontmatter.status }}</Badge>
+# 哔哩哔哩封面生成器
+
+当前状态：<Badge type="warning">{{ $frontmatter.status }}</Badge>
 
 <SiteLinkBadge :link="$frontmatter.link" />
 <GitHubBadge :repo="$frontmatter.repo" />
@@ -17,7 +19,7 @@ link: https://bilibili-cover-generator.yunyoujun.cn
 
 但在制作视频之前，我还需要先制作相关封面。
 
-我有个尽可能使用 Web/Node 技术与 TypeScript 实现制作投稿视频流程的想法。
+我有个尽可能使用 Web/Node 技术与 `TypeScript` 实现制作投稿视频流程的想法。
 
 因此，在一切开始之前，我打算制作一个哔哩哔哩封面生成器。
 并基于它预置日后视频的封面模板。
