@@ -1,9 +1,9 @@
 # Docs
 
+[为什么有这个站点](https://docs.yunyoujun.cn/why/)
+
 - <https://docs.yunyoujun.cn>
 - <https://docs.yyj.moe>
-
-[为什么有这个站点](https://docs.yunyoujun.cn/why/)
 
 ## License
 

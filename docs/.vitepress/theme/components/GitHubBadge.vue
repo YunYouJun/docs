@@ -19,8 +19,9 @@ const repoUrl = computed(() => {
     :href="repoUrl" target="_blank" :title="title"
     flex="~ items-center justify-start gap-2 cursor-pointer"
     class="my-4 rounded bg-$vp-c-bg-soft p-4 shadow text-$vp-c-text-1! no-underline!"
+    hover="bg-gray-50 dark:bg-dark-500"
   >
-    <div class="size-8" i-simple-icons:github />
+    <div class="size-10" i-ri-github-line />
     <div class="text-base">
       {{ repo }}
     </div>

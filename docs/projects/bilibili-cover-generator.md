@@ -23,3 +23,9 @@ link: https://bilibili-cover-generator.yunyoujun.cn
 
 因此，在一切开始之前，我打算制作一个哔哩哔哩封面生成器。
 并基于它预置日后视频的封面模板。
+
+---
+
+> [1年150期视频？影视飓风2024工作流分享！](https://www.bilibili.com/video/BV13QzbYuEWr)
+
+壳理论
