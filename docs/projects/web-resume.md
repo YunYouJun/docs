@@ -17,7 +17,7 @@ link: https://web-resume.yunyoujun.cn/
 
 ### 在线使用
 
-切换至 [编辑器](/editor) 页面，即可通过编写 YAML 在线编辑简历。
+切换至 [编辑器](https://web-resume.yunyoujun.cn/editor) 页面，即可通过编写 YAML 在线编辑简历。
 
 ```yaml
 id: 云游君
