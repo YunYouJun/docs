@@ -59,9 +59,8 @@ Click repo `Use this template`, or clone this。
 git clone https://github.com/YunYouJun/web-resume
 cd web-resume
 pnpm i
-pnpm run resume
-# pnpm run dev
-# view http://localhost:5173/local
+pnpm run dev
+# view http://localhost:5173/
 ```
 
 <br />
@@ -82,3 +81,5 @@ pnpm run resume
 ## Other
 
 还在不断优化捏！
+
+- [ ] 简历模板列表
