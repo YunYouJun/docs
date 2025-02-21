@@ -1,0 +1,26 @@
+/* override vitepress */
+/* .VPSocialLink */
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  // first
+  .VPSocialLink:first-child {
+    width: 72px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// mermaid
+.vp-doc {
+  .mermaid {
+    p {
+      line-height: unset;
+    }
+  }
+}
+
+.VPNavBarMenuLink {
+  line-height: unset !important;
+}

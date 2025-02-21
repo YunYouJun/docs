@@ -1,35 +1,19 @@
 import { defineConfig } from 'vitepress'
+import { getVitepressConfig } from '../../../packages/docs/node'
+
+const vpConfig = getVitepressConfig({
+  repo: 'https://github.com/YunYouJun/docs',
+})
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ...vpConfig,
+
   title: '云游君的文档',
   description: 'Docs for YunYouJun Projects.',
-  lastUpdated: true,
-
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: '/favicon.svg',
-      },
-    ],
-  ],
 
   themeConfig: {
-    logo: '/favicon.svg',
-    outline: [2, 4],
-    search: {
-      provider: 'local',
-    },
-
-    lastUpdated: {
-      text: 'Last Updated',
-    },
-
-    editLink: {
-      pattern: 'https://github.com/YunYouJun/docs/edit/main/docs/:path',
-    },
+    ...vpConfig.themeConfig,
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -54,10 +38,17 @@ export default defineConfig({
           { text: '哔哩哔哩封面生成器', link: '/projects/bilibili-cover-generator' },
         ],
       },
+      {
+        text: '辅助类库',
+        items: [
+          { text: '@yunyoujun/docs', link: '/libs/docs' },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/YunYouJun/docs' },
+      ...vpConfig.themeConfig.socialLinks,
+
       { icon: 'x', link: 'https://x.com/YunYouJun' },
       { icon: 'bilibili', link: 'https://space.bilibili.com/1579790' },
       { icon: 'wechat', link: 'https://cdn.yunyoujun.cn/img/about/white-qrcode-and-search.jpg' },

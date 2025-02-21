@@ -1,0 +1,23 @@
+{
+  "name": "@yunyoujun/docs",
+  "version": "0.0.1",
+  "description": "Some components/utils for docs.",
+  "author": {
+    "name": "YunYouJun",
+    "email": "me@yunyoujun.cn",
+    "url": "https://www.yunyoujun.cn"
+  },
+  "homepage": "https://docs.yunyoujun.cn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YunYouJun/docs"
+  },
+  "exports": {
+    "./styles": "./client/styles/index.ts"
+  },
+  "devDependencies": {
+    "@shikijs/vitepress-twoslash": "^2.5.0",
+    "vitepress": "^1.6.3",
+    "vitepress-plugin-group-icons": "^1.3.6"
+  }
+}

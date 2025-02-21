@@ -2,10 +2,8 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
-import './style.css'
 
-import 'uno.css'
-import 'virtual:group-icons.css'
+import './styles'
 
 export default {
   extends: DefaultTheme,

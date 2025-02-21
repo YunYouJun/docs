@@ -5,6 +5,9 @@
     "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "bundler",
+    "paths": {
+      "@yunyoujun/docs": ["packages/docs/index.ts"]
+    },
     "resolveJsonModule": true,
     "types": [
       "vite/client"
