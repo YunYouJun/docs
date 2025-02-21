@@ -1,8 +1,8 @@
 import type { UserConfig } from 'vite'
+import path from 'node:path'
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-import path from 'path'
 import { unocssConfig } from './unocss'
 
 /**
@@ -21,7 +21,7 @@ export function getViteConfig(options: {
 } = {}) {
   const plugins = [
     Unocss({
-      ...unocssConfig
+      ...unocssConfig,
     }),
 
     Components({
@@ -71,7 +71,7 @@ export function getViteConfig(options: {
         },
       },
     },
-    
+
     plugins,
   }
 

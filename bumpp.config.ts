@@ -1,7 +1,7 @@
 import { defineConfig } from 'bumpp'
 
 const packages = [
-  'docs'
+  'docs',
 ]
 
 export default defineConfig({

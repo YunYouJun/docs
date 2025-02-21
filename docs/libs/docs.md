@@ -10,7 +10,7 @@ pnpm add -D @yunyoujun/docs
 
 ```bash [pnpm]
 # 按需添加
-pnpm add -D unocss unplugin-vue-components 
+pnpm add -D unocss unplugin-vue-components
 # vitepress
 pnpm add -D vitepress-plugin-group-icons @shikijs/vitepress-twoslash
 ```
