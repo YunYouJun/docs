@@ -1,5 +1,6 @@
 {
   "name": "@yunyoujun/docs",
+  "type": "module",
   "version": "0.0.1",
   "description": "Some components/utils for docs.",
   "author": {
@@ -13,10 +14,25 @@
     "url": "https://github.com/YunYouJun/docs"
   },
   "exports": {
-    "./styles": "./client/styles/index.ts"
+    ".": {
+      "import": "./dist/index.mjs"
+    },
+    "./styles": "./client/styles/index.ts",
+    "./*": "./*"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp --no-tag --no-commit --no-push && pnpm publish --no-git-checks"
   },
   "devDependencies": {
     "@shikijs/vitepress-twoslash": "^2.5.0",
+    "unbuild": "^3.3.1",
     "vitepress": "^1.6.3",
     "vitepress-plugin-group-icons": "^1.3.6"
   }

@@ -20,12 +20,6 @@ export const integrations: Integration[] = [
   { name: 'Vue CLI', link: '/integrations/vue-cli', icon: 'i-logos-vue' },
 ]
 
-export const independentIntegrations: Integration[] = [
-  { name: 'LiteApp', link: '/integrations/liteapp', icon: 'i-weui:rectangle-4-filled' },
-  { name: 'CLI', link: '/integrations/cli', icon: 'i-carbon-terminal' },
-  { name: 'Node.js RPC', link: '/integrations/nodejs', icon: 'i-logos-nodejs' },
-]
-
 export const examples: Example[] = [
   {
     name: 'vite',
