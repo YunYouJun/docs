@@ -1,5 +1,6 @@
 {
   "name": "@yunyoujun/docs-site",
+  "type": "module",
   "private": true,
   "scripts": {
     "docs:dev": "vitepress dev --host",
