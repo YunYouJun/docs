@@ -1,2 +1,8 @@
 packages:
+  - docs
   - packages/*
+catalog:
+  '@shikijs/twoslash': ^3.2.1
+  '@shikijs/types': ^3.2.1
+  '@shikijs/vitepress-twoslash': ^3.2.1
+  shiki: ^3.2.1

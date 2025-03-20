@@ -1,0 +1,19 @@
+{
+  "name": "@yunyoujun/docs-site",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vitepress dev --host",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@yunyoujun/docs": "workspace:*"
+  },
+  "devDependencies": {
+    "sass": "^1.86.0",
+    "unocss": "^66.0.0",
+    "unplugin-vue-components": "^28.4.1",
+    "vitepress": "2.0.0-alpha.4",
+    "vitepress-plugin-group-icons": "^1.3.8"
+  }
+}

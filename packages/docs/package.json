@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Some components/utils for docs.",
   "author": {
     "name": "YunYouJun",
@@ -13,16 +13,31 @@
     "type": "git",
     "url": "https://github.com/YunYouJun/docs"
   },
+  "keywords": [
+    "docs",
+    "vitepress",
+    "config",
+    "vue"
+  ],
   "exports": {
     ".": {
-      "import": "./dist/index.mjs"
+      "types": "./dist/node/index.d.ts",
+      "import": "./dist/node/index.mjs"
+    },
+    "./node": {
+      "types": "./dist/node/index.d.ts",
+      "import": "./dist/node/index.mjs"
+    },
+    "./types": {
+      "import": "./dist/types/index.d.ts"
     },
     "./styles": "./client/styles/index.ts",
     "./*": "./*"
   },
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/node/index.mjs",
   "files": [
+    "bin",
+    "client",
     "dist"
   ],
   "scripts": {
@@ -31,9 +46,14 @@
     "release": "bumpp --no-tag --no-commit --no-push && pnpm publish --no-git-checks"
   },
   "devDependencies": {
-    "@shikijs/vitepress-twoslash": "^2.5.0",
-    "unbuild": "^3.3.1",
-    "vitepress": "^1.6.3",
-    "vitepress-plugin-group-icons": "^1.3.6"
+    "@shikijs/types": "catalog:",
+    "@shikijs/vitepress-twoslash": "catalog:",
+    "date-fns": "^4.1.0",
+    "shiki": "catalog:",
+    "unbuild": "^3.5.0",
+    "unocss": "^66.0.0",
+    "unplugin-vue-components": "^28.4.1",
+    "vite": "^6.2.2",
+    "vitepress-plugin-group-icons": "^1.3.8"
   }
 }

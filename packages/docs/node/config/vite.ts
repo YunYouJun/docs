@@ -1,8 +1,9 @@
 import type { UserConfig } from 'vite'
-import path from 'node:path'
+import { format } from 'date-fns'
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { componentsDir } from '..'
 import { unocssConfig } from './unocss'
 
 /**
@@ -34,7 +35,7 @@ export function getViteConfig(options: {
         '.vitepress/theme/components',
 
         // common components for vitepress docs
-        path.resolve(__dirname, '../../client/components'),
+        componentsDir,
 
         ...options.componentsDirs ?? [],
       ],
@@ -58,6 +59,10 @@ export function getViteConfig(options: {
   ]
 
   const viteConfig: UserConfig = {
+    define: {
+      __BUILD_TIME__: JSON.stringify(format(new Date(), 'yyyy/MM/dd HH:mm:ss')),
+    },
+
     css: {
       /**
        * @see https://vite.dev/config/shared-options.html#css-preprocessoroptions

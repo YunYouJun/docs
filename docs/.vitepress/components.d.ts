@@ -9,8 +9,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     DemoDocsProjectList: typeof import('./theme/components/demo/DemoDocsProjectList.vue')['default']
-    DocsProjectCard: typeof import('./../../packages/docs/client/components/DocsProjectCard.vue')['default']
-    DocsProjectList: typeof import('./../../packages/docs/client/components/DocsProjectList.vue')['default']
     GitHubBadge: typeof import('./theme/components/GitHubBadge.vue')['default']
     SiteLinkBadge: typeof import('./theme/components/SiteLinkBadge.vue')['default']
   }

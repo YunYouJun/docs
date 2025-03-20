@@ -1,5 +1,6 @@
 import path from 'node:path'
+import { _dirname } from './config/shims'
 
 export * from './config'
 
-export const componentsDir = path.resolve(__dirname, '../client/components')
+export const componentsDir = path.resolve(_dirname, '../client/components')
