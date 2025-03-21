@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/YunYouJun/docs/compare/v0.1.1...v0.1.2) (2025-03-21)
+
+
+### Bug Fixes
+
+* docs componentsDir relative path ([6d30d72](https://github.com/YunYouJun/docs/commit/6d30d72a18f10dd43fcdcea7a85d5c07d96727f9))
+
+
+
 ## [0.1.1](https://github.com/YunYouJun/docs/compare/v0.1.0...v0.1.1) (2025-03-21)
 
 
