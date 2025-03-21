@@ -56,10 +56,10 @@ export const examples: Example[] = [
 
 export interface ProjectItem {
   title: string
-  description: string
+  description?: string
   link: string
-  logo: string
-  color: string
+  logo?: string
+  color?: string
   icons?: string[]
 }
 

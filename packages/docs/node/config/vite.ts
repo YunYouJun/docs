@@ -2,8 +2,10 @@ import type { UserConfig } from 'vite'
 import { format } from 'date-fns'
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
+import VueDevTools from 'vite-plugin-vue-devtools'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { componentsDir } from '..'
+
 import { unocssConfig } from './unocss'
 
 /**
@@ -56,6 +58,9 @@ export function getViteConfig(options: {
         eslint: 'vscode-icons:file-type-eslint',
       },
     }),
+
+    // https://github.com/vuejs/devtools
+    VueDevTools(),
   ]
 
   const viteConfig: UserConfig = {
