@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "description": "Some components/utils for docs.",
   "author": {
     "name": "YunYouJun",
