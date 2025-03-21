@@ -7,6 +7,8 @@ const props = defineProps<{
   project: ProjectItem
 }>()
 
+const router = useRouter()
+
 /**
  * 是否是外部链接
  */
@@ -15,7 +17,6 @@ const isExternalLink = computed(() => {
     return props.project.blank
   return props.project.link?.startsWith('http')
 })
-const router = useRouter()
 
 function onClick() {
   if (isExternalLink.value)
@@ -28,10 +29,10 @@ function onClick() {
 <template>
   <a
     :key="project.title"
-    class="project-link relative rounded-xl p-2"
+    class="project-link relative rounded-xl p-2 cursor-pointer"
     border="~ 1px solid transparent"
     hover="border-color-$vp-c-brand"
-    :href="!isExternalLink ? project.link : undefined"
+    :href="isExternalLink ? project.link : undefined"
     :target="isExternalLink ? '_blank' : ''"
     flex="~ col items-center justify-center"
     size-40
