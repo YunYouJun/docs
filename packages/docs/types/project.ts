@@ -23,5 +23,10 @@ export interface ProjectItem {
   /**
    * 项目链接
    */
-  link: string
+  link?: string
+  /**
+   * 是否新窗口打开
+   * @default false
+   */
+  blank?: boolean
 }

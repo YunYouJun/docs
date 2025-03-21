@@ -12,7 +12,8 @@ defineProps<{
     class="project-link relative rounded-xl p-2"
     border="~ 1px solid transparent"
     hover="border-color-$vp-c-brand"
-    :href="project.link" target="_blank"
+    :href="project.link"
+    :target="project.blank ? '_blank' : ''"
     flex="~ col items-center justify-center"
     size-40
   >
