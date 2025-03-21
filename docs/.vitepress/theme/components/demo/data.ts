@@ -1,3 +1,5 @@
+import type { ProjectItem } from '@yunyoujun/docs/types'
+
 export interface Integration {
   icon: string
   name: string
@@ -53,15 +55,6 @@ export const examples: Example[] = [
     icon: 'i-logos-nuxt-icon',
   },
 ]
-
-export interface ProjectItem {
-  title: string
-  description?: string
-  link: string
-  logo?: string
-  color?: string
-  icons?: string[]
-}
 
 export const projects: ProjectItem[] = [
   {

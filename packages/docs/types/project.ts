@@ -14,7 +14,7 @@ export interface ProjectItem {
   /**
    * 主题色
    */
-  color: string
+  color?: string
   /**
    * 图标
    * @description 使用到的技术栈
