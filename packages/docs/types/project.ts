@@ -19,7 +19,7 @@ export interface ProjectItem {
    * 图标
    * @description 使用到的技术栈
    */
-  icons: string[]
+  icons?: string[]
   /**
    * 项目链接
    */

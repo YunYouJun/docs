@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "packageManager": "pnpm@10.6.5",
   "description": "Docs for YunYouJun Projects.",
@@ -35,7 +35,7 @@
     "@iconify-json/simple-icons": "^1.2.29",
     "@iconify-json/vscode-icons": "^1.2.16",
     "@shikijs/types": "catalog:",
-    "@types/node": "^22.13.10",
+    "@types/node": "^22.13.11",
     "@unocss/eslint-plugin": "^66.0.0",
     "bumpp": "^10.1.0",
     "conventional-changelog-cli": "^5.0.0",
