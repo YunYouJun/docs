@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Some components/utils for docs.",
   "author": {
     "name": "YunYouJun",
@@ -54,6 +54,7 @@
     "unocss": "^66.0.0",
     "unplugin-vue-components": "^28.4.1",
     "vite": "^6.2.2",
+    "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.3.8"
   }
 }

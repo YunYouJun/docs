@@ -6,3 +6,4 @@ catalog:
   '@shikijs/types': ^3.2.1
   '@shikijs/vitepress-twoslash': ^3.2.1
   shiki: ^3.2.1
+  vitepress: ^2.0.0-alpha.4
