@@ -1,3 +1,12 @@
+## [0.1.7](https://github.com/YunYouJun/docs/compare/v0.1.6...v0.1.7) (2025-03-21)
+
+
+### Features
+
+* add external link logic ([7f42ae5](https://github.com/YunYouJun/docs/commit/7f42ae546c6204cbb2ef20415ee2c07153a3c9f0))
+
+
+
 ## [0.1.6](https://github.com/YunYouJun/docs/compare/v0.1.5...v0.1.6) (2025-03-21)
 
 
