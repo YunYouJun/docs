@@ -1,9 +1,28 @@
 <script setup lang="ts">
 import type { ProjectItem } from '../../types'
+import { useRouter, withBase } from 'vitepress'
+import { computed } from 'vue'
 
-defineProps<{
+const props = defineProps<{
   project: ProjectItem
 }>()
+
+/**
+ * 是否是外部链接
+ */
+const isExternalLink = computed(() => {
+  if (typeof props.project.blank === 'boolean')
+    return props.project.blank
+  return props.project.link?.startsWith('http')
+})
+const router = useRouter()
+
+function onClick() {
+  if (isExternalLink.value)
+    return
+
+  router.go(withBase(props.project.link || ''))
+}
 </script>
 
 <template>
@@ -12,10 +31,11 @@ defineProps<{
     class="project-link relative rounded-xl p-2"
     border="~ 1px solid transparent"
     hover="border-color-$vp-c-brand"
-    :href="project.link"
-    :target="project.blank ? '_blank' : ''"
+    :href="!isExternalLink ? project.link : undefined"
+    :target="isExternalLink ? '_blank' : ''"
     flex="~ col items-center justify-center"
     size-40
+    @click="onClick"
   >
     <div class="text-4xl" flex="~ grow" :style="`color: ${project.color}`" :class="project.logo" />
     <div class="flex items-center justify-center" gap-2>
