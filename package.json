@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": true,
   "packageManager": "pnpm@10.6.5",
   "description": "Docs for YunYouJun Projects.",
@@ -25,7 +25,7 @@
     "docs:build": "pnpm -C docs run docs:build",
     "docs:preview": "pnpm -C docs run docs:preview",
     "lint": "eslint .",
-    "release": "bumpp --all --execute=\"npm run changelog\"",
+    "release": "bumpp",
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
