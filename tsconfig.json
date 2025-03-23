@@ -6,7 +6,8 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
-      "@yunyoujun/docs": ["packages/docs/index.ts"]
+      "@yunyoujun/docs/*": ["packages/docs/*/index.ts"],
+      "@yunyoujun/docs": ["packages/docs/node/index.ts"]
     },
     "resolveJsonModule": true,
     "types": [
@@ -19,6 +20,10 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
+  "include": [
+    "docs/.vitepress/**/*.ts",
+    "docs/vite.config.ts"
+  ],
   "exclude": [
     "**/node_modules/**",
     "**/dist/**",

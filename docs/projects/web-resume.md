@@ -1,17 +1,10 @@
 ---
+title: Web Resume 简历生成器
+description: Web 端可打印为 PDF 的简历
 status: prod
 repo: YunYouJun/web-resume
 link: https://web-resume.yunyoujun.cn/
 ---
-
-# Web Resume 简历生成器
-
-> Web 端可打印为 PDF 的简历
-
-当前状态：<Badge type="info">{{ $frontmatter.status }}</Badge>
-
-<SiteLinkBadge :link="$frontmatter.link" />
-<GitHubBadge :repo="$frontmatter.repo" />
 
 ## 使用
 

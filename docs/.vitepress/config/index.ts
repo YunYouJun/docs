@@ -34,6 +34,7 @@ export default defineConfig({
       {
         text: '应用项目',
         items: [
+          { text: 'Girid - 动画角色印象表', link: '/projects/girid' },
           { text: 'Web Resume 简历', link: '/projects/web-resume' },
           { text: '哔哩哔哩封面生成器', link: '/projects/bilibili-cover-generator' },
         ],

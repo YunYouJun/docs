@@ -28,6 +28,10 @@
       "types": "./dist/node/index.d.ts",
       "import": "./dist/node/index.mjs"
     },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs"
+    },
     "./types": {
       "import": "./dist/types/index.d.ts"
     },

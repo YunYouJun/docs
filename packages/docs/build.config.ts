@@ -5,6 +5,9 @@ import pkg from './package.json'
 export default defineBuildConfig({
   // If entries is not provided, will be automatically inferred from package.json
   entries: [
+    // common utils
+    './utils/index',
+
     // node
     './node/index',
 

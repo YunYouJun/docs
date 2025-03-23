@@ -1,15 +1,9 @@
 ---
+title: 哔哩哔哩封面生成器
 status: dev
 repo: YunYouJun/bilibili-cover-generator
 link: https://bilibili-cover-generator.yunyoujun.cn
 ---
-
-# 哔哩哔哩封面生成器
-
-当前状态：<Badge type="warning">{{ $frontmatter.status }}</Badge>
-
-<SiteLinkBadge :link="$frontmatter.link" />
-<GitHubBadge :repo="$frontmatter.repo" />
 
 ## 背景
 
