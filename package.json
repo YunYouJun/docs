@@ -33,7 +33,7 @@
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/simple-icons": "^1.2.29",
-    "@iconify-json/vscode-icons": "^1.2.16",
+    "@iconify-json/vscode-icons": "^1.2.17",
     "@shikijs/types": "catalog:",
     "@types/node": "^22.13.11",
     "@unocss/eslint-plugin": "^66.0.0",

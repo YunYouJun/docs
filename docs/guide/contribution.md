@@ -6,14 +6,10 @@
 
 请使用 [pnpm](https://pnpm.io/)。
 
-::: code-group
-
-```bash [Node]
+```bash
 # 开启 corepack，以使用与 package.json packageManager 一致的 pnpm 版本。
 corepack enable
 ```
-
-:::
 
 ```bash [pnpm]
 # 安装依赖

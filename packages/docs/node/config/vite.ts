@@ -1,5 +1,5 @@
 import type { UserConfig } from 'vite'
-import { format } from 'date-fns'
+import dayjs from 'dayjs'
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueDevTools from 'vite-plugin-vue-devtools'
@@ -65,7 +65,7 @@ export function getViteConfig(options: {
 
   const viteConfig: UserConfig = {
     define: {
-      __BUILD_TIME__: JSON.stringify(format(new Date(), 'yyyy/MM/dd HH:mm:ss')),
+      __BUILD_TIME__: JSON.stringify(dayjs().format('YYYY/MM/DD HH:mm:ss')),
     },
 
     css: {

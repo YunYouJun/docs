@@ -2,6 +2,8 @@ import { defineBuildConfig } from 'unbuild'
 
 import pkg from './package.json'
 
+const includeDeps: string[] = []
+
 export default defineBuildConfig({
   // If entries is not provided, will be automatically inferred from package.json
   entries: [
@@ -23,9 +25,8 @@ export default defineBuildConfig({
   ],
 
   declaration: true,
-
   externals: [
-    ...Object.keys(pkg.devDependencies || {}),
+    ...Object.keys(pkg.devDependencies || {}).filter(id => !includeDeps.includes(id)),
 
     'unocss/vite',
     'unplugin-vue-components/vite',

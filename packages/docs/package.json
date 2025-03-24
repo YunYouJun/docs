@@ -49,10 +49,12 @@
     "prepublishOnly": "pnpm run build",
     "release": "bumpp --no-tag --no-commit --no-push && pnpm publish --no-git-checks"
   },
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  },
   "devDependencies": {
     "@shikijs/types": "catalog:",
     "@shikijs/vitepress-twoslash": "catalog:",
-    "date-fns": "^4.1.0",
     "shiki": "catalog:",
     "unbuild": "^3.5.0",
     "unocss": "^66.0.0",
