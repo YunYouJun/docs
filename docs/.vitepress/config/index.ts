@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitepress'
+import pkg from '../../../package.json'
 import { getVitepressConfig } from '../../../packages/docs/node'
+
+import typedocSidebar from '../../api/typedoc-sidebar.json'
 
 const vpConfig = getVitepressConfig({
   repo: 'https://github.com/YunYouJun/docs',
@@ -19,33 +22,42 @@ export default defineConfig({
     nav: [
       { text: '博客', link: 'https://www.yunyoujun.cn' },
       { text: '项目橱窗', link: 'https://www.yunyoujun.cn/projects/' },
+      { text: 'Docs API', link: '/api/' },
     ],
 
-    sidebar: [
-      {
-        text: '指南',
-        items: [
-          { text: '为什么有这个站点？', link: '/guide/why' },
-          { text: '快速开始', link: '/guide/getting-started' },
-          { text: '参与贡献', link: '/guide/contribution' },
-          { text: '变更日志', link: '/changelog' },
-        ],
-      },
-      {
-        text: '应用项目',
-        items: [
-          { text: 'Girid - 动画角色印象表', link: '/projects/girid' },
-          { text: 'Web Resume 简历', link: '/projects/web-resume' },
-          { text: '哔哩哔哩封面生成器', link: '/projects/bilibili-cover-generator' },
-        ],
-      },
-      {
-        text: '辅助类库',
-        items: [
-          { text: '@yunyoujun/docs', link: '/libs/docs' },
-        ],
-      },
-    ],
+    sidebar: {
+      '/': [
+        {
+          text: '指南',
+          items: [
+            { text: '为什么有这个站点？', link: '/guide/why' },
+            { text: '快速开始', link: '/guide/getting-started' },
+            { text: '参与贡献', link: '/guide/contribution' },
+            { text: '变更日志', link: '/changelog' },
+          ],
+        },
+        {
+          text: '应用项目',
+          items: [
+            { text: 'Girid - 动画角色印象表', link: '/projects/girid' },
+            { text: 'Web Resume 简历', link: '/projects/web-resume' },
+            { text: '哔哩哔哩封面生成器', link: '/projects/bilibili-cover-generator' },
+          ],
+        },
+        {
+          text: '辅助类库',
+          items: [
+            { text: '@yunyoujun/docs', link: '/libs/docs' },
+          ],
+        },
+      ],
+      '/api/': [
+        {
+          text: 'API',
+          items: typedocSidebar,
+        },
+      ],
+    },
 
     socialLinks: [
       ...vpConfig.themeConfig.socialLinks,
@@ -62,5 +74,10 @@ export default defineConfig({
         link: 'mailto:me@yunyoujun.cn',
       },
     ],
+
+    footer: {
+      copyright: '@YunYouJun',
+      message: `v${pkg.version}`,
+    },
   },
 })

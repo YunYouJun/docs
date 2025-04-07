@@ -1,0 +1,23 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "docsRoot": ".",
+  "entryPoints": [
+    "../packages/docs/node",
+    "../packages/docs/types",
+    "../packages/docs/utils"
+  ],
+  "exclude": [
+    "examples/**/*"
+  ],
+  "out": "./api",
+  "categorizeByGroup": true,
+  "plugin": ["typedoc-plugin-markdown", "typedoc-vitepress-theme"],
+  "readme": "none",
+  // https://typedoc-plugin-markdown.org/plugins/vitepress
+  "sidebar": {
+    "autoConfiguration": true,
+    "format": "vitepress",
+    "pretty": true,
+    "collapsed": false
+  }
+}

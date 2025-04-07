@@ -42,6 +42,7 @@ export function getViteConfig(options: {
         ...options.componentsDirs ?? [],
       ],
       dts: '.vitepress/components.d.ts',
+      extensions: ['vue', 'md'],
 
       ...options.componentsOptions,
     }),

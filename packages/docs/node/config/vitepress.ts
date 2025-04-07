@@ -1,13 +1,14 @@
 import type { UserConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs'
+// @ts-expect-error no @types
+import taskLists from 'markdown-it-task-lists'
 import { defineConfig } from 'vitepress'
-// import taskLists from 'markdown-it-task-lists'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 
 export const markdown: UserConfig['markdown'] = {
   config(md) {
-    // md.use(taskLists)
+    md.use(taskLists)
     md.use(groupIconMdPlugin, {
       titleBar: { includeSnippet: true },
     })
@@ -19,6 +20,7 @@ export const markdown: UserConfig['markdown'] = {
     }),
   ],
 
+  languages: ['ts'],
   lineNumbers: true,
 }
 
@@ -37,6 +39,7 @@ export const themeConfig: UserConfig['themeConfig'] = {
  * default UserConfig for VitePress
  */
 export const userConfig = defineConfig({
+  cleanUrls: true,
   head: [
     [
       'link',
@@ -45,6 +48,8 @@ export const userConfig = defineConfig({
         href: '/favicon.svg',
       },
     ],
+
+    ['meta', { name: 'author', content: 'YunYouJun' }],
   ],
 
   lastUpdated: true,
@@ -60,7 +65,6 @@ export const userConfig = defineConfig({
  * - 例如：
  * - 当传入 `repo` 时，默认设置 `editLink` 和 `socialLinks`
  *  - `editLink` 为 repo + `/edit/main/docs/:path`
- *
  */
 export function getVitepressConfig(options: {
   repo?: string
