@@ -1,3 +1,12 @@
+## [0.1.11](https://github.com/YunYouJun/docs/compare/v0.1.10...v0.1.11) (2025-04-30)
+
+
+### Bug Fixes
+
+* **style:** gap for DocsProjectCard by props ([d1d2d16](https://github.com/YunYouJun/docs/commit/d1d2d165e0054cc23dabebcf8d8f6ad540fc2077))
+
+
+
 ## [0.1.10](https://github.com/YunYouJun/docs/compare/v0.1.9...v0.1.10) (2025-04-30)
 
 
