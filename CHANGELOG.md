@@ -1,3 +1,17 @@
+## [0.1.10](https://github.com/YunYouJun/docs/compare/v0.1.9...v0.1.10) (2025-04-30)
+
+
+### Bug Fixes
+
+* **style:** gap for DocsProjectCard when only title ([685fa22](https://github.com/YunYouJun/docs/commit/685fa22ce3d61f62ecede233273008bd58dc9a50))
+
+
+### Features
+
+* update vitepress config & deps ([4f1a9bd](https://github.com/YunYouJun/docs/commit/4f1a9bd01a79c50815c2c4735f85e63e24f2e094))
+
+
+
 ## [0.1.9](https://github.com/YunYouJun/docs/compare/v0.1.8...v0.1.9) (2025-03-24)
 
 
