@@ -93,4 +93,8 @@ export const projects: ProjectItem[] = [
       'i-vscode-icons:file-type-playwright',
     ],
   },
+  {
+    title: 'Only Title',
+    logo: 'i-ri:police-badge-line',
+  },
 ]

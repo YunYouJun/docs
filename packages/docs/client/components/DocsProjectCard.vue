@@ -29,7 +29,7 @@ function onClick() {
 <template>
   <a
     :key="project.title"
-    class="project-link relative rounded-xl p-2 cursor-pointer"
+    class="project-link relative rounded-xl p-2 cursor-pointer gap-1"
     border="~ 1px solid transparent"
     hover="border-color-$vp-c-brand"
     :href="isExternalLink ? project.link : undefined"
@@ -38,16 +38,18 @@ function onClick() {
     size-40
     @click="onClick"
   >
-    <div class="text-4xl" flex="~ grow" :style="`color: ${project.color}`" :class="project.logo" />
+    <div class="text-4xl" flex="~" :style="`color: ${project.color}`" :class="project.logo" />
     <div class="flex items-center justify-center" gap-2>
       <div v-for="icon in project.icons" :key="icon" class="my-2" :class="icon" />
     </div>
-    <span text-sm class="font-sans-serif font-bold">
-      {{ project.title }}
-    </span>
-    <span class="text-8px">
-      {{ project.description }}
-    </span>
+    <div class="flex items-center justify-center flex-col">
+      <span text-sm class="font-sans-serif font-bold">
+        {{ project.title }}
+      </span>
+      <span class="text-8px">
+        {{ project.description }}
+      </span>
+    </div>
   </a>
 </template>
 
