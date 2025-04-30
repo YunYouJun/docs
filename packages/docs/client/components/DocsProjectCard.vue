@@ -24,29 +24,68 @@ function onClick() {
 
   router.go(withBase(props.project.link || ''))
 }
+
+const logoClasses = computed(() => {
+  const classes = []
+  if (props.project.logo)
+    classes.push(props.project.logo)
+
+  let textSize = 'text-6xl'
+  if (props.project.description) {
+    if (props.project.icons?.length) {
+      textSize = 'text-4xl'
+    }
+    else {
+      textSize = 'text-5xl'
+    }
+  }
+
+  classes.push(textSize)
+  return classes
+})
 </script>
 
 <template>
   <a
     :key="project.title"
-    class="project-link relative rounded-xl p-2 cursor-pointer gap-1"
+    class="project-link relative rounded-xl p-2 cursor-pointer"
     border="~ 1px solid transparent"
     hover="border-color-$vp-c-brand"
     :href="isExternalLink ? project.link : undefined"
     :target="isExternalLink ? '_blank' : ''"
     flex="~ col items-center justify-center"
     size-40
+    :class="{
+      'gap-2': project.description,
+      'gap-4': !project.description,
+    }"
     @click="onClick"
   >
-    <div class="text-4xl" flex="~" :style="`color: ${project.color}`" :class="project.logo" />
-    <div class="flex items-center justify-center" gap-2>
-      <div v-for="icon in project.icons" :key="icon" class="my-2" :class="icon" />
+    <div
+      flex="~"
+      :style="`color: ${project.color}`"
+      :class="logoClasses"
+    />
+    <div
+      v-if="project.icons?.length"
+      class="flex items-center justify-center my-1" gap-2
+    >
+      <div v-for="icon in project.icons" :key="icon" :class="icon" />
     </div>
-    <div class="flex items-center justify-center flex-col">
-      <span text-sm class="font-sans-serif font-bold">
+    <div class="flex items-center justify-center flex-col gap-2">
+      <div
+        text-sm
+        class="font-sans-serif font-bold leading-none"
+        :class="{
+          '-mb-2': !project.description,
+        }"
+      >
         {{ project.title }}
-      </span>
-      <span class="text-8px">
+      </div>
+      <span
+        v-if="project.description"
+        class="text-8px leading-normal"
+      >
         {{ project.description }}
       </span>
     </div>

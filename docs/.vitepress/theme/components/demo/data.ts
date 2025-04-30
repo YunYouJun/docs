@@ -94,7 +94,13 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
+    title: 'Logo + Title',
+    description: '使用 Playwright 进行测试',
+    link: 'https://github.com/YunYouJun',
+    logo: 'i-ri:playstation-line',
+  },
+  {
     title: 'Only Title',
-    logo: 'i-ri:police-badge-line',
+    logo: 'i-logos:vue',
   },
 ]
