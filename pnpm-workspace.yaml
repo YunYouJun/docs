@@ -2,9 +2,9 @@ packages:
   - docs
   - packages/*
 catalog:
-  '@shikijs/twoslash': ^3.3.0
-  '@shikijs/types': ^3.3.0
-  '@shikijs/vitepress-twoslash': ^3.3.0
-  shiki: ^3.3.0
-  vite: ^6.3.4
+  '@shikijs/twoslash': ^3.4.2
+  '@shikijs/types': ^3.4.2
+  '@shikijs/vitepress-twoslash': ^3.4.2
+  shiki: ^3.4.2
+  vite: ^6.3.5
   vitepress: ^2.0.0-alpha.5
