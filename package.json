@@ -22,7 +22,7 @@
     "build": "pnpm run docs:build",
     "preview": "pnpm run docs:preview",
     "docs:dev": "pnpm -C docs run docs:dev",
-    "docs:build": "pnpm -C docs run docs:build",
+    "docs:build": "pnpm -C docs run build",
     "docs:preview": "pnpm -C docs run docs:preview",
     "lint": "eslint .",
     "release": "bumpp",

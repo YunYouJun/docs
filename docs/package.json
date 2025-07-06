@@ -3,6 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "build": "pnpm run predocs && pnpm run docs:build",
     "predocs": "typedoc",
     "docs:dev": "vitepress dev --host",
     "docs:build": "vitepress build",
