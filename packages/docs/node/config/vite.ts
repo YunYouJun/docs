@@ -49,7 +49,7 @@ export function getViteConfig(options: {
 
     groupIconVitePlugin({
       customIcon: {
-        node: 'vscode-icons:file-type-node',
+        nodejs: 'vscode-icons:file-type-node',
         cli: 'vscode-icons:folder-type-cli',
         postcss: 'vscode-icons:file-type-postcss',
         playwright: 'vscode-icons:file-type-playwright',
@@ -67,20 +67,6 @@ export function getViteConfig(options: {
   const viteConfig: UserConfig = {
     define: {
       __BUILD_TIME__: JSON.stringify(dayjs().format('YYYY/MM/DD HH:mm:ss')),
-    },
-
-    css: {
-      /**
-       * @see https://vite.dev/config/shared-options.html#css-preprocessoroptions
-       */
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler', // or "modern", "legacy"
-          importers: [
-            // ...
-          ],
-        },
-      },
     },
 
     plugins,

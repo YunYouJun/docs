@@ -12,13 +12,13 @@
     "@yunyoujun/docs": "workspace:*"
   },
   "devDependencies": {
-    "sass": "^1.89.0",
-    "typedoc": "^0.28.4",
-    "typedoc-plugin-markdown": "^4.6.3",
+    "sass": "^1.89.2",
+    "typedoc": "^0.28.7",
+    "typedoc-plugin-markdown": "^4.7.0",
     "typedoc-vitepress-theme": "^1.1.2",
-    "unocss": "^66.1.2",
-    "unplugin-vue-components": "^28.5.0",
+    "unocss": "^66.3.3",
+    "unplugin-vue-components": "^28.8.0",
     "vitepress": "catalog:",
-    "vitepress-plugin-group-icons": "^1.5.5"
+    "vitepress-plugin-group-icons": "^1.6.1"
   }
 }

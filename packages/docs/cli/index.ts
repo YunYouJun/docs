@@ -1,4 +1,4 @@
-import process, { title } from 'node:process'
+import process from 'node:process'
 import prompts from 'prompts'
 
 import yargs from 'yargs'

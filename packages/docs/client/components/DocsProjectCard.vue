@@ -72,7 +72,7 @@ const logoClasses = computed(() => {
     >
       <div v-for="icon in project.icons" :key="icon" :class="icon" />
     </div>
-    <div class="flex items-center justify-center flex-col gap-2">
+    <div class="flex items-center justify-center gap-2 flex-col">
       <div
         text-sm
         class="font-sans-serif font-bold leading-none"
