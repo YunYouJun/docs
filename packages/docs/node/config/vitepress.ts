@@ -68,7 +68,7 @@ export const userConfig = defineConfig({
  */
 export function getVitepressConfig(options: {
   repo?: string
-}): UserConfig {
+} = {}): UserConfig {
   const themeConfig = userConfig.themeConfig!
 
   if (options.repo) {

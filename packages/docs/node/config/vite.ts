@@ -1,8 +1,7 @@
-import type { UserConfig } from 'vite'
+import type { PluginOption, UserConfig } from 'vite'
 import dayjs from 'dayjs'
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
-import VueDevTools from 'vite-plugin-vue-devtools'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { componentsDir } from '..'
 
@@ -21,8 +20,15 @@ export function getViteConfig(options: {
    * custom components dirs
    */
   componentsDirs?: string[]
-} = {}) {
-  const plugins = [
+
+  /**
+   * @default true
+   */
+  vueDevTools?: import('vite-plugin-vue-devtools').VitePluginVueDevToolsOptions | boolean
+} = {
+  vueDevTools: true,
+}) {
+  const plugins: PluginOption[] = [
     Unocss({
       ...unocssConfig,
     }),
@@ -59,10 +65,16 @@ export function getViteConfig(options: {
         eslint: 'vscode-icons:file-type-eslint',
       },
     }),
-
-    // https://github.com/vuejs/devtools
-    VueDevTools(),
   ]
+
+  // https://github.com/vuejs/devtools
+  if (options.vueDevTools) {
+    plugins.push(
+      import('vite-plugin-vue-devtools').then(m => m.default(
+        typeof options.vueDevTools === 'object' ? options.vueDevTools : {},
+      )),
+    )
+  }
 
   const viteConfig: UserConfig = {
     define: {

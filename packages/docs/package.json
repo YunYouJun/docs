@@ -59,12 +59,12 @@
     "@shikijs/types": "catalog:",
     "@shikijs/vitepress-twoslash": "catalog:",
     "shiki": "catalog:",
-    "unbuild": "^3.5.0",
-    "unocss": "^66.3.3",
-    "unplugin-vue-components": "^28.8.0",
+    "unbuild": "^3.6.1",
+    "unocss": "^66.4.2",
+    "unplugin-vue-components": "^29.0.0",
     "vite": "catalog:",
-    "vite-plugin-vue-devtools": "^7.7.7",
+    "vite-plugin-vue-devtools": "^8.0.0",
     "vitepress": "catalog:",
-    "vitepress-plugin-group-icons": "^1.6.1"
+    "vitepress-plugin-group-icons": "^1.6.3"
   }
 }
