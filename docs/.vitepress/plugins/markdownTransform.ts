@@ -11,8 +11,12 @@ export function MarkdownTransform(): Plugin {
         return null
       }
 
-      // 满足 /projects/*.md 的条件
-      if (id.match(/\/projects\//)) {
+      /**
+       * id 是文件路径
+       * 满足以 /projects/xxx.md 或 /projects/xxx/index.md 结尾
+       */
+      const isProjectHomePage = id.match(/\/projects\/[^/]+(\/index)?\.md$/)
+      if (isProjectHomePage) {
         // const [projectsPath, _name] = id.split('/')
         // const name = _name.toLowerCase().slice(0, -3)
 
