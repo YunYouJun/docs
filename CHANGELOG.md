@@ -1,3 +1,12 @@
+## [0.1.13](https://github.com/YunYouJun/docs/compare/v0.1.12...v0.1.13) (2025-09-30)
+
+
+### Features
+
+* dynamic import vite-plugin-vue-devtools ([2b0a3d4](https://github.com/YunYouJun/docs/commit/2b0a3d4495e965efb831dd0039958f7c749ceaab))
+
+
+
 ## [0.1.12](https://github.com/YunYouJun/docs/compare/v0.1.11...v0.1.12) (2025-07-06)
 
 

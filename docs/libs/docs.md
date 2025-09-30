@@ -27,10 +27,11 @@ pnpm add -D vitepress-plugin-group-icons @shikijs/vitepress-twoslash
 ```ts [vite.config.ts] {2,5-6,9}
 import { getViteConfig } from '@yunyoujun/docs'
 import { defineConfig } from 'vite'
-import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
+// custom your plugins
+// import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
 
 const viteConfig = getViteConfig({})
-viteConfig.plugins?.push(MarkdownTransform())
+// viteConfig.plugins?.push(MarkdownTransform())
 
 export default defineConfig({
   ...viteConfig,
@@ -60,6 +61,64 @@ export default defineConfig({
     ...vpConfig.themeConfig,
 
     // your theme config
+  },
+})
+```
+
+### 配置 TypeDoc
+
+```bash
+pnpm add -D typedoc
+pnpm add -D typedoc-plugin-markdown typedoc-vitepress-theme
+```
+
+设置 `entryPoints`:
+
+```json{4-8} [typedoc.json]
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "docsRoot": ".",
+  "entryPoints": [
+    "../packages/docs/node",
+    "../packages/docs/types",
+    "../packages/docs/utils"
+  ],
+  "exclude": [
+    "examples/**/*"
+  ],
+  "out": "./api",
+  "categorizeByGroup": true,
+  "plugin": ["typedoc-plugin-markdown", "typedoc-vitepress-theme"],
+  "readme": "none",
+  // https://typedoc-plugin-markdown.org/plugins/vitepress
+  "sidebar": {
+    "autoConfiguration": true,
+    "format": "vitepress",
+    "pretty": true,
+    "collapsed": false
+  }
+}
+```
+
+```bash [.gitignore]
+api
+```
+
+```ts [.vitepress/config/index.ts]
+import typedocSidebar from '../../api/typedoc-sidebar.json'
+
+export default defineConfig({
+  // ...
+  themeConfig: {
+    // ...
+    sidebar: {
+      '/api/': [
+        {
+          text: 'API',
+          items: typedocSidebar,
+        },
+      ],
+    },
   },
 })
 ```

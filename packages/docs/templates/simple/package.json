@@ -1,5 +1,5 @@
 {
-  "name": "@yunyoujun/docs-site",
+  "name": "yunyoujun-docs-template",
   "type": "module",
   "private": true,
   "scripts": {
@@ -19,7 +19,7 @@
     "typedoc-vitepress-theme": "^1.1.2",
     "unocss": "^66.5.2",
     "unplugin-vue-components": "^29.1.0",
-    "vitepress": "catalog:",
+    "vitepress": "^2.0.0-alpha.12",
     "vitepress-plugin-group-icons": "^1.6.3"
   }
 }

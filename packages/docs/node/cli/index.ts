@@ -4,7 +4,7 @@ import prompts from 'prompts'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
-import { version } from '../package.json'
+import { version } from '../../package.json'
 
 const cli = yargs(hideBin(process.argv))
   .scriptName('docs')

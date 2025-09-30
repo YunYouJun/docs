@@ -39,6 +39,12 @@ export default defineConfig({
         },
         getProjectSidebar(),
         {
+          text: 'Starter 模板',
+          items: [
+            { text: 'Tauri + Vite + Vue3', link: '/starters/tauri-vite-vue' },
+          ],
+        },
+        {
           text: '辅助类库',
           items: [
             { text: '@yunyoujun/docs', link: '/libs/docs' },

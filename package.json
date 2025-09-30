@@ -1,9 +1,9 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "private": true,
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.17.1",
   "description": "Docs for YunYouJun Projects.",
   "author": {
     "name": "YunYouJun",
@@ -29,18 +29,18 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.2.1",
+    "@antfu/eslint-config": "^5.4.1",
     "@iconify-json/logos": "^1.2.9",
     "@iconify-json/ri": "^1.2.5",
-    "@iconify-json/simple-icons": "^1.2.47",
-    "@iconify-json/vscode-icons": "^1.2.29",
+    "@iconify-json/simple-icons": "^1.2.53",
+    "@iconify-json/vscode-icons": "^1.2.30",
     "@shikijs/types": "catalog:",
-    "@types/node": "^24.3.0",
-    "@unocss/eslint-plugin": "^66.4.2",
+    "@types/node": "^24.6.0",
+    "@unocss/eslint-plugin": "^66.5.2",
     "bumpp": "^10.2.3",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^9.33.0",
-    "eslint-plugin-format": "^1.0.1",
-    "vue-tsc": "^3.0.5"
+    "eslint": "^9.36.0",
+    "eslint-plugin-format": "^1.0.2",
+    "vue-tsc": "^3.1.0"
   }
 }

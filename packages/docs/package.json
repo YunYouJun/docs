@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Some components/utils for docs.",
   "author": {
     "name": "YunYouJun",
@@ -50,7 +50,7 @@
     "release": "bumpp --no-tag --no-commit --no-push && pnpm publish --no-git-checks"
   },
   "dependencies": {
-    "dayjs": "^1.11.13",
+    "dayjs": "^1.11.18",
     "markdown-it-task-lists": "^2.1.1",
     "prompts": "^2.4.2",
     "yargs": "^18.0.0"
@@ -60,10 +60,10 @@
     "@shikijs/vitepress-twoslash": "catalog:",
     "shiki": "catalog:",
     "unbuild": "^3.6.1",
-    "unocss": "^66.4.2",
-    "unplugin-vue-components": "^29.0.0",
+    "unocss": "^66.5.2",
+    "unplugin-vue-components": "^29.1.0",
     "vite": "catalog:",
-    "vite-plugin-vue-devtools": "^8.0.0",
+    "vite-plugin-vue-devtools": "^8.0.2",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.6.3"
   }

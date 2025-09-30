@@ -12,6 +12,8 @@ export default defineBuildConfig({
 
     // node
     './node/index',
+    // cli
+    './node/cli/index',
 
     // types
     './types/index',
