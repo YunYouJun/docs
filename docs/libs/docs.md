@@ -14,11 +14,14 @@ pnpm add -D @yunyoujun/docs
 ```
 
 ```bash [pnpm]
-# 按需添加
 pnpm add -D unocss unplugin-vue-components vite-plugin-vue-devtools
-# vitepress
-pnpm add -D vitepress-plugin-group-icons @shikijs/vitepress-twoslash
+pnpm add -D @shikijs/vitepress-twoslash
 ```
+
+默认包含的依赖：
+
+- `vitepress-plugin-group-icons`
+- `markdown-it-task-lists`
 
 ## 配置
 
@@ -63,6 +66,19 @@ export default defineConfig({
     // your theme config
   },
 })
+```
+
+```ts [.vitepress/theme/index.ts] {5-6}
+import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+
+import './style.css'
+import 'uno.css'
+import 'virtual:group-icons.css'
+
+export default {
+  extends: DefaultTheme,
+} satisfies Theme
 ```
 
 ### 配置 TypeDoc

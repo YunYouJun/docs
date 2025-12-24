@@ -13,6 +13,12 @@ import { unocssConfig } from './unocss'
  */
 export function getViteConfig(options: {
   /**
+   * @default true
+   * @see https://unocss.dev/
+   */
+  unocss?: import('unocss').UserConfig | boolean
+
+  /**
    * unplugin-vue-components options
    */
   componentsOptions?: Parameters<typeof Components>[0]
@@ -31,6 +37,7 @@ export function getViteConfig(options: {
   const plugins: PluginOption[] = [
     Unocss({
       ...unocssConfig,
+      ...(options.unocss === true ? {} : options.unocss),
     }),
 
     Components({
