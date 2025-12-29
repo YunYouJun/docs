@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 import pkg from '../../../package.json'
-import { getVitepressConfig } from '../../../packages/docs/node'
 
+import { getVitepressConfig } from '../../../packages/docs/node'
 import typedocSidebar from '../../api/typedoc-sidebar.json'
 import { getProjectSidebar } from './project'
 
@@ -10,7 +11,7 @@ const vpConfig = getVitepressConfig({
 })
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(defineConfig({
   ...vpConfig,
 
   title: '云游君的文档',
@@ -80,4 +81,4 @@ export default defineConfig({
       message: `v${pkg.version}`,
     },
   },
-})
+}))

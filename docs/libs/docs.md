@@ -139,6 +139,35 @@ export default defineConfig({
 })
 ```
 
+### 配置 Mermaid
+
+> [VitePress Plugin Mermaid](https://emersonbottero.github.io/vitepress-plugin-mermaid/)
+
+```bash
+pnpm add -D vitepress-plugin-mermaid mermaid
+```
+
+```ts [.vitepress/config/index.ts]
+import { withMermaid } from 'vitepress-plugin-mermaid'
+
+export default withMermaid({
+  // your existing vitepress config...
+  // optionally, you can pass MermaidConfig
+  mermaid: {
+    // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+  },
+  // optionally set additional config for plugin itself with MermaidPluginConfig
+  mermaidPlugin: {
+    class: 'mermaid my-class', // set additional css classes for parent container
+  },
+})
+```
+
+```mermaid
+flowchart LR
+  Start --> Stop
+```
+
 ## 组件
 
 ### DemoDocsProjectList

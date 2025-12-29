@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/docs",
   "type": "module",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Some components/utils for docs.",
   "author": {
     "name": "YunYouJun",
@@ -46,6 +46,7 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "prepublishOnly": "pnpm run build",
     "release": "bumpp --no-tag --no-commit --no-push && pnpm publish --no-git-checks"
   },
@@ -65,6 +66,6 @@
     "unplugin-vue-components": "catalog:",
     "vite": "catalog:",
     "vite-plugin-vue-devtools": "catalog:",
-    "vitepress": "catalog:"
+    "vitepress": "2.0.0-alpha.15"
   }
 }

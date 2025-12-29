@@ -13,6 +13,7 @@
     "@yunyoujun/docs": "workspace:*"
   },
   "devDependencies": {
+    "mermaid": "catalog:",
     "sass": "catalog:",
     "typedoc": "catalog:",
     "typedoc-plugin-markdown": "catalog:",
@@ -20,6 +21,7 @@
     "unocss": "catalog:",
     "unplugin-vue-components": "catalog:",
     "vitepress": "catalog:",
-    "vitepress-plugin-group-icons": "catalog:"
+    "vitepress-plugin-group-icons": "catalog:",
+    "vitepress-plugin-mermaid": "catalog:"
   }
 }
