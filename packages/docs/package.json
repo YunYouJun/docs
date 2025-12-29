@@ -66,6 +66,6 @@
     "unplugin-vue-components": "catalog:",
     "vite": "catalog:",
     "vite-plugin-vue-devtools": "catalog:",
-    "vitepress": "2.0.0-alpha.15"
+    "vitepress": "catalog:"
   }
 }
