@@ -2,12 +2,16 @@ import type { Plugin } from 'vite'
 // node import
 import { replacer } from '../../../packages/docs/utils'
 
+const MD_RE = /\.md\b/
+const PROJECT_HOME_RE = /\/projects\/[^/]+(\/index)?\.md$/
+const HEADER_RE = /\n#{2,6}\s.+/
+
 export function MarkdownTransform(): Plugin {
   return {
     name: 'yyj-docs:md-transform',
     enforce: 'pre',
     async transform(code, id) {
-      if (!id.match(/\.md\b/)) {
+      if (!MD_RE.test(id)) {
         return null
       }
 
@@ -15,13 +19,13 @@ export function MarkdownTransform(): Plugin {
        * id 是文件路径
        * 满足以 /projects/xxx.md 或 /projects/xxx/index.md 结尾
        */
-      const isProjectHomePage = id.match(/\/projects\/[^/]+(\/index)?\.md$/)
+      const isProjectHomePage = id.match(PROJECT_HOME_RE)
       if (isProjectHomePage) {
         // const [projectsPath, _name] = id.split('/')
         // const name = _name.toLowerCase().slice(0, -3)
 
         const frontmatterEnds = code.indexOf('---\n\n')
-        const firstHeader = code.search(/\n#{2,6}\s.+/)
+        const firstHeader = code.search(HEADER_RE)
         const slideIndex = firstHeader < 0
           ? (
               (frontmatterEnds < 0)

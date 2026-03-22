@@ -1,3 +1,4 @@
+import type { UserConfig } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import pkg from '../../../package.json'
@@ -6,9 +7,10 @@ import { getVitepressConfig } from '../../../packages/docs/node'
 import typedocSidebar from '../../api/typedoc-sidebar.json'
 import { getProjectSidebar } from './project'
 
+// Bridge config type across different VitePress dependency instances in pnpm workspaces.
 const vpConfig = getVitepressConfig({
   repo: 'https://github.com/YunYouJun/docs',
-})
+}) as unknown as UserConfig
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid(defineConfig({
@@ -24,6 +26,7 @@ export default withMermaid(defineConfig({
     nav: [
       { text: '博客', link: 'https://www.yunyoujun.cn' },
       { text: '项目橱窗', link: 'https://www.yunyoujun.cn/projects/' },
+      { text: 'AI 笔记', link: 'https://ai.yunyoujun.cn/' },
       { text: 'Docs API', link: '/api/' },
     ],
 
@@ -48,7 +51,14 @@ export default withMermaid(defineConfig({
         {
           text: '辅助类库',
           items: [
-            { text: '@yunyoujun/docs', link: '/libs/docs' },
+            {
+              text: '@yunyoujun/docs',
+              link: '/libs/docs',
+              items: [
+                { text: '与 AI 协作', link: '/libs/docs/work-with-ai' },
+                { text: 'API', link: '/api/' },
+              ],
+            },
           ],
         },
       ],

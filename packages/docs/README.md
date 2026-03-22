@@ -12,7 +12,7 @@ pnpm add -D unocss unplugin-vue-components vitepress-plugin-group-icons @shikijs
 pnpm add -D vite-plugin-vue-devtools
 ```
 
-See [@yunyoujun/docs](https://docs.yunyoujun.cn/libs/docs.html) for more details.
+See [@yunyoujun/docs](https://docs.yunyoujun.cn/libs/docs/) for more details.
 
 ## Config
 

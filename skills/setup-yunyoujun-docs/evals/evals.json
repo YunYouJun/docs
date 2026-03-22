@@ -1,0 +1,29 @@
+{
+  "skill_name": "setup-yunyoujun-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这是一个新的 VitePress 文档项目，帮我集成 @yunyoujun/docs，并把配置接到 vite.config.ts 和 docs/.vitepress/config/index.ts。",
+      "expected_output": "完成依赖安装建议，并给出基于 getViteConfig/getVitepressConfig 的可用配置改动。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我的仓库是 monorepo，文档项目在 docs/ 子目录。请把 @yunyoujun/docs 集成进去，同时保留已有 nav/sidebar 配置。",
+      "expected_output": "识别 docs 子项目路径，使用 pnpm -C docs 安装依赖，并以增量合并方式更新配置。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我已经安装了 @yunyoujun/docs，但运行报 unocss 模块找不到。请修好并补上最小验证步骤。",
+      "expected_output": "补齐缺失依赖，修复导入，给出可执行的验证命令和结果说明。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "pnpm workspace 下接入 getVitepressConfig 后，在 defineConfig 处出现 TS2345 类型错误（看起来是不同依赖实例导致的私有字段不兼容）。请在不破坏现有配置的前提下修复。",
+      "expected_output": "识别并修复跨包 VitePress 类型不兼容问题，使用本地 UserConfig 进行安全断言，并保留原有配置结构。",
+      "files": []
+    }
+  ]
+}

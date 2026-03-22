@@ -7,7 +7,6 @@ hero:
     src: /favicon.svg
     alt: Logo
   name: "云游君的文档"
-  # text: "Docs for YunYouJun Projects."
   tagline: Docs for YunYouJun Projects.
   actions:
     - theme: brand

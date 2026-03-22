@@ -7,6 +7,10 @@ import { componentsDir } from '..'
 
 import { unocssConfig } from './unocss'
 
+const VUE_RE = /\.vue$/
+const VUE_QUERY_RE = /\.vue\?vue/
+const MD_RE = /\.md$/
+
 /**
  * 获取常用的 vite 配置
  * get common vite config
@@ -42,9 +46,9 @@ export function getViteConfig(options: {
 
     Components({
       include: [
-        /\.vue$/,
-        /\.vue\?vue/,
-        /\.md$/,
+        VUE_RE,
+        VUE_QUERY_RE,
+        MD_RE,
       ],
       dirs: [
         '.vitepress/theme/components',
