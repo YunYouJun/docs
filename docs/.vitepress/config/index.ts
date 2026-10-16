@@ -23,6 +23,11 @@ export default withMermaid(defineConfig(withYunlefun({
   title: '云游君的文档',
   description: 'Docs for YunYouJun Projects.',
 
+  vite: {
+    // mermaid 11.17 imports CommonJS fastdom and its promised extension; pre-bundle them like the other deps vitepress-plugin-mermaid lists.
+    optimizeDeps: { include: ['mermaid > fastdom', 'mermaid > fastdom/extensions/fastdom-promised.js'] },
+  },
+
   markdown: {
     ...vpConfig.markdown,
     config(md) {

@@ -40,6 +40,6 @@ catalog:
   vitepress: ^2.0.0-alpha.20
   vitepress-plugin-group-icons: ^1.8.1
   vitepress-plugin-mermaid: ^2.0.17
-  vitepress-theme-yunlefun: ^0.4.0
+  vitepress-theme-yunlefun: ^0.4.2
   vue-tsc: ^3.3.13
   yargs: ^18.2.0
