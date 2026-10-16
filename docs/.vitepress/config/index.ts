@@ -1,26 +1,43 @@
 import type { UserConfig } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import { withYunlefun, yunlefunMarkdown, zhThemeConfig } from 'vitepress-theme-yunlefun/config'
 import pkg from '../../../package.json'
 
 import { getVitepressConfig } from '../../../packages/docs/node'
 import typedocSidebar from '../../api/typedoc-sidebar.json'
+import { docsMark } from '../docs-mark'
 import { getProjectSidebar } from './project'
 
 // Bridge config type across different VitePress dependency instances in pnpm workspaces.
 const vpConfig = getVitepressConfig({
   repo: 'https://github.com/YunYouJun/docs',
 }) as unknown as UserConfig
+// The theme draws the brand mark, so the shared native logo is dropped.
+const { logo: _logo, ...baseThemeConfig } = vpConfig.themeConfig ?? {}
 
 // https://vitepress.dev/reference/site-config
-export default withMermaid(defineConfig({
+export default withMermaid(defineConfig(withYunlefun({
   ...vpConfig,
 
   title: '云游君的文档',
   description: 'Docs for YunYouJun Projects.',
 
+  markdown: {
+    ...vpConfig.markdown,
+    config(md) {
+      vpConfig.markdown?.config?.(md)
+      md.use(yunlefunMarkdown)
+    },
+  },
+
   themeConfig: {
-    ...vpConfig.themeConfig,
+    ...baseThemeConfig,
+    ...zhThemeConfig,
+    // Keep the deeper outline from @yunyoujun/docs.
+    outline: { label: '本页内容', level: [2, 4] },
+    brand: { icon: docsMark, hero: true },
+    editLink: { ...baseThemeConfig.editLink, text: '在 GitHub 上编辑此页' },
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -91,4 +108,4 @@ export default withMermaid(defineConfig({
       message: `v${pkg.version}`,
     },
   },
-}))
+})))

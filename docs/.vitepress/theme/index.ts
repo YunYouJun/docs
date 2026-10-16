@@ -1,19 +1,12 @@
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-// https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
+import Theme from 'vitepress-theme-yunlefun'
 
 import './styles'
 
-export default {
-  extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
-  // eslint-disable-next-line unused-imports/no-unused-vars
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  },
-} satisfies Theme
+/**
+ * Shared YunLeFun VitePress theme; site identity comes from `themeConfig.brand`.
+ *
+ * To add layout slots, wrap the theme's `Layout` and pass slots through.
+ *
+ * @see https://design.yunle.fun/guide/vitepress-theme
+ */
+export default Theme
