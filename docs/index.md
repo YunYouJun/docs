@@ -3,9 +3,6 @@
 layout: home
 
 hero:
-  image:
-    src: /favicon.svg
-    alt: Logo
   name: "云游君的文档"
   tagline: Docs for YunYouJun Projects.
   actions:

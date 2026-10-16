@@ -41,5 +41,6 @@ catalog:
   vitepress: ^2.0.0-alpha.17
   vitepress-plugin-group-icons: ^1.7.1
   vitepress-plugin-mermaid: ^2.0.17
+  vitepress-theme-yunlefun: ^0.4.0
   vue-tsc: ^3.2.6
   yargs: ^18.0.0
