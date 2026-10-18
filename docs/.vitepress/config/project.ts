@@ -16,6 +16,7 @@ export function getProjectSidebar(): DefaultTheme.SidebarItem {
       { text: '📝 Web Resume 简历', link: '/projects/web-resume' },
       { text: '🧧 AI 春联', link: '/projects/ai-sfc' },
       { text: '🎬 哔哩哔哩封面生成器', link: '/projects/bilibili-cover-generator' },
+      { text: '🌌 Valaxy 1.0 宣传片记录', link: '/creator/logs/2026/20261018-valaxy-1-0' },
       { text: '更多项目', link: '/guide/more' },
     ],
   }
